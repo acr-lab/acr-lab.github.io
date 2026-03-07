@@ -20,7 +20,13 @@ Lang Ward, Hanoi
 ## Get in Touch
 
 For general inquiries, please email us at
-[acr.lab@viasm.edu.vn](mailto:acr.lab@viasm.edu.vn).
+<span id="contact-email">[enable JavaScript to see email]</span>.
+<script>
+  var u = 'acr.lab'; var d = 'viasm.edu.vn';
+  var e = u + '@' + d;
+  var el = document.getElementById('contact-email');
+  el.innerHTML = '<a href="mailto:' + e + '">' + u + ' [at] ' + d + '</a>';
+</script>
 
 ---
 
