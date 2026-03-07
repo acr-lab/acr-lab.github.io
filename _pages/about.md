@@ -38,3 +38,11 @@ It builds on years of collaboration between the two organizations in cryptograph
 The lab's mission is to translate advanced mathematical knowledge into tools for protecting Vietnam's national digital infrastructure — serving as a critical link between fundamental research and real-world application, particularly in the area of post-quantum cryptography. 
 
 The lab is headed by Assoc. Prof. Lê Minh Hà (VIASM Managing Director) and co-headed by Dr. Đỗ Xuân Thành, with Prof. Phan Dương Hiệu (Telecom Paris) serving as Scientific Advisor. ACR Lab also aims to bridge the domestic and international Vietnamese cryptography communities, strengthen international cooperation, and raise the quality of cryptographic education and research in Vietnam.
+
+## Research Topics
+
+- Privacy-preserving cryptosystems
+- Decentralized cryptosystems
+- Post-quantum cryptography
+- Mathematical foundations of cryptography
+- Other topics: coding theory, blockchain

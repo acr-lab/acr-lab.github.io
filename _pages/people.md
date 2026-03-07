@@ -46,12 +46,15 @@ nav_order: 2
                 {% endfor %}
               </p>
             {% endif %}
-            <p class="card-text">
+            <p class="card-text" style="font-size: 120%;">
               {% if person.email %}
                 <a href="mailto:{{ person.email }}" onclick="event.stopPropagation();"><i class="fas fa-envelope"></i></a>
               {% endif %}
               {% if person.scholar %}
                 <a href="{{ person.scholar }}" target="_blank" onclick="event.stopPropagation();"><i class="ai ai-google-scholar"></i></a>
+              {% endif %}
+              {% if person.dblp %}
+                <a href="{{ person.dblp }}" target="_blank" onclick="event.stopPropagation();"><i class="ai ai-dblp"></i></a>
               {% endif %}
               {% if person.github %}
                 <a href="https://github.com/{{ person.github }}" target="_blank" onclick="event.stopPropagation();"><i class="fab fa-github"></i></a>
@@ -86,12 +89,15 @@ nav_order: 2
                      class="img-fluid rounded"
                      alt="{{ person.name }}">
               {% endif %}
-              <div class="mt-3">
+              <div class="mt-3" style="font-size: 120%;">
                 {% if person.email %}
                   <a href="mailto:{{ person.email }}"><i class="fas fa-envelope fa-lg"></i></a>
                 {% endif %}
                 {% if person.scholar %}
                   <a href="{{ person.scholar }}" target="_blank"><i class="ai ai-google-scholar fa-lg"></i></a>
+                {% endif %}
+                {% if person.dblp %}
+                  <a href="{{ person.dblp }}" target="_blank"><i class="ai ai-dblp fa-lg"></i></a>
                 {% endif %}
                 {% if person.github %}
                   <a href="https://github.com/{{ person.github }}" target="_blank"><i class="fab fa-github fa-lg"></i></a>
