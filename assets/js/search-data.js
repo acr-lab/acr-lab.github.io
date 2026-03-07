@@ -30,12 +30,12 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/publications/";
           },
-        },{id: "nav-events",
-          title: "events",
+        },{id: "nav-activities",
+          title: "activities",
           description: "seminars, talks, and workshops hosted by the lab.",
           section: "Navigation",
           handler: () => {
-            window.location.href = "/events/";
+            window.location.href = "/activities/";
           },
         },{id: "news-website-created",
           title: 'Website created.',
@@ -45,11 +45,26 @@ ninja.data = [{
           description: "",
           section: "People",handler: () => {
               window.location.href = "/people/do_xuan_thanh/";
+            },},{id: "people-hoang-van-thuc",
+          title: 'Hoang_van_thuc',
+          description: "",
+          section: "People",handler: () => {
+              window.location.href = "/people/hoang_van_thuc/";
             },},{id: "people-le-minh-ha",
           title: 'Le_minh_ha',
           description: "",
           section: "People",handler: () => {
               window.location.href = "/people/le_minh_ha/";
+            },},{id: "people-nguyen-quoc-toan",
+          title: 'Nguyen_quoc_toan',
+          description: "",
+          section: "People",handler: () => {
+              window.location.href = "/people/nguyen_quoc_toan/";
+            },},{id: "people-phan-duong-hieu",
+          title: 'Phan_duong_hieu',
+          description: "",
+          section: "People",handler: () => {
+              window.location.href = "/people/phan_duong_hieu/";
             },},{id: "projects-project-1",
           title: 'project 1',
           description: "with background image",
