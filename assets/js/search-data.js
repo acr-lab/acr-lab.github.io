@@ -37,14 +37,34 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/activities/";
           },
-        },{id: "news-website-created",
+        },{id: "nav-contact",
+          title: "contact",
+          description: "get in touch with the ACR Lab.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/contact/";
+          },
+        },{id: "news-hội-thảo-giới-thiệu-thuật-toán-chữ-ký-số-kháng-lượng-tử-vn-pqsign-của-ban-cơ-yếu-chính-phủ-và-lễ-ra-mắt-phòng-nghiên-cứu-mật-mã-tiên-tiến",
+          title: 'Hội thảo Giới thiệu thuật toán chữ ký số kháng lượng tử VN-PQsign...',
+          description: "",
+          section: "News",},{id: "news-website-created",
           title: 'Website created.',
           description: "",
-          section: "News",},{id: "people-do-xuan-thanh",
+          section: "News",},{id: "people-do-dai-chi",
+          title: 'Do_dai_chi',
+          description: "",
+          section: "People",handler: () => {
+              window.location.href = "/people/do_dai_chi/";
+            },},{id: "people-do-xuan-thanh",
           title: 'Do_xuan_thanh',
           description: "",
           section: "People",handler: () => {
               window.location.href = "/people/do_xuan_thanh/";
+            },},{id: "people-hoang-dinh-linh",
+          title: 'Hoang_dinh_linh',
+          description: "",
+          section: "People",handler: () => {
+              window.location.href = "/people/hoang_dinh_linh/";
             },},{id: "people-hoang-van-thuc",
           title: 'Hoang_van_thuc',
           description: "",
@@ -55,6 +75,16 @@ ninja.data = [{
           description: "",
           section: "People",handler: () => {
               window.location.href = "/people/le_minh_ha/";
+            },},{id: "people-le-quoc-huy",
+          title: 'Le_quoc_huy',
+          description: "",
+          section: "People",handler: () => {
+              window.location.href = "/people/le_quoc_huy/";
+            },},{id: "people-mac-dang-truong",
+          title: 'Mac_dang_truong',
+          description: "",
+          section: "People",handler: () => {
+              window.location.href = "/people/mac_dang_truong/";
             },},{id: "people-nguyen-quoc-toan",
           title: 'Nguyen_quoc_toan',
           description: "",
@@ -65,6 +95,11 @@ ninja.data = [{
           description: "",
           section: "People",handler: () => {
               window.location.href = "/people/phan_duong_hieu/";
+            },},{id: "people-vu-quoc-huy",
+          title: 'Vu_quoc_huy',
+          description: "",
+          section: "People",handler: () => {
+              window.location.href = "/people/vu_quoc_huy/";
             },},{id: "projects-project-1",
           title: 'project 1',
           description: "with background image",
@@ -76,27 +111,6 @@ ninja.data = [{
           section: "Projects",handler: () => {
               window.location.href = "/projects/2_project/";
             },},{
-        id: 'social-email',
-        title: 'email',
-        section: 'Socials',
-        handler: () => {
-          window.open("mailto:%61%63%72.%6C%61%62@%76%69%61%73%6D.%65%64%75.%76%6E", "_blank");
-        },
-      },{
-        id: 'social-rss',
-        title: 'RSS Feed',
-        section: 'Socials',
-        handler: () => {
-          window.open("/feed.xml", "_blank");
-        },
-      },{
-        id: 'social-custom_social',
-        title: 'Custom_social',
-        section: 'Socials',
-        handler: () => {
-          window.open("https://viasm.edu.vn/", "_blank");
-        },
-      },{
       id: 'light-theme',
       title: 'Change theme to light',
       description: 'Change the theme of the site to Light',
