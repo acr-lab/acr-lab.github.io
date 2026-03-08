@@ -37,6 +37,13 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/activities/";
           },
+        },{id: "nav-links",
+          title: "links",
+          description: "Useful links for cryptography research and related resources.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/links/";
+          },
         },{id: "nav-contact",
           title: "contact",
           description: "get in touch with the ACR Lab.",
