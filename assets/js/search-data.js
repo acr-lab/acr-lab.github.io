@@ -10,43 +10,43 @@ ninja.data = [{
       window.location.href = "/";
     },
   },{id: "nav-people",
-          title: "people",
-          description: "people in the lab.",
+          title: "People",
+          description: "People in the lab.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/people/";
           },
         },{id: "nav-projects",
-          title: "projects",
-          description: "list of the team members are/were involved in.",
+          title: "Projects",
+          description: "List of the team members are/were involved in.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/projects/";
           },
         },{id: "nav-publications",
-          title: "publications",
-          description: "recent publications in reversed chronological order.",
+          title: "Publications",
+          description: "Recent publications in reversed chronological order.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/publications/";
           },
         },{id: "nav-activities",
-          title: "activities",
-          description: "seminars, talks, and workshops hosted by the lab.",
+          title: "Activities",
+          description: "Seminars, talks, and workshops hosted by the lab.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/activities/";
           },
         },{id: "nav-links",
-          title: "links",
+          title: "Links",
           description: "Useful links for cryptography research and related resources.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/links/";
           },
         },{id: "nav-contact",
-          title: "contact",
-          description: "get in touch with the ACR Lab.",
+          title: "Contact",
+          description: "Get in touch with the ACR Lab.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/contact/";
@@ -56,6 +56,9 @@ ninja.data = [{
           description: "",
           section: "News",},{id: "news-website-created",
           title: 'Website created.',
+          description: "",
+          section: "News",},{id: "news-gs-phan-dương-hiệu-bảo-vệ-tư-duy-bên-trong-để-không-bị-điều-khiển-từ-ngoài",
+          title: 'GS Phan Dương Hiệu: Bảo vệ tư duy bên trong để không bị...',
           description: "",
           section: "News",},{id: "people-do-dai-chi",
           title: 'Do_dai_chi',
