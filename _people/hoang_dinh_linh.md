@@ -5,5 +5,10 @@ image: hoang-dinh-linh.jpg
 scholar: https://scholar.google.com/citations?user=C5UUN_0AAAAJ&hl=en
 bio: >
   Vietnam Institute of Cryptography Science and Technology.
+interests:
+- Symmetric Cryptography 
+- Randomness
+- Permutation-based Cryptograpy
+- Provable Security
 order: 7
 ---

@@ -1,6 +1,6 @@
 ---
 name: Do Xuan Thanh
-role: [director, researcher]
+role: director
 image: do-xuan-thanh.jpg
 email: doxuanthanh@viasm.edu.vn
 dblp: https://dblp.org/pid/256/9276.html

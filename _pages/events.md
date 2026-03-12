@@ -29,17 +29,32 @@ unless otherwise noted. All are welcome.
   <tbody>
   {% for talk in site.data.events.upcoming %}
     <tr>
-      <td style="white-space: nowrap;">{{ talk.date | date: "%b %-d, %Y" }}</td>
+      <td style="white-space: nowrap;">
+        {% if talk.date_to and talk.date_from != talk.date_to %}
+          {{ talk.date_from | date: "%b %-d" }} – {{ talk.date_to | date: "%b %-d, %Y" }}
+        {% else %}
+          {{ talk.date_from | date: "%b %-d, %Y" }}
+        {% endif %}
+      </td>
       <td style="white-space: nowrap;">
         {{ talk.speaker }}
         <br><small class="text-muted">{{ talk.affiliation }}</small>
       </td>
       <td>
-        <strong>{{ talk.title }}</strong>
-        {% if talk.abstract != "" %}
-          <br><small>{{ talk.abstract }}</small>
-        {% endif %}
-        {% if talk.time %}<br><small class="text-muted">{{ talk.time }} · {{ talk.location }}</small>{% endif %}
+        {%- if talk.abstract != "" and talk.abstract -%}
+          <details style="margin:0;padding:0;">
+            <summary><strong>{{ talk.title }}</strong></summary>
+            <small>{{ talk.abstract | newline_to_br }}</small>
+          </details>
+        {%- else -%}
+          <strong>{{ talk.title }}</strong>
+        {%- endif -%}
+        {%- if talk.time_from or talk.location %}
+          <small class="text-muted">{% if talk.time_from %}{{ talk.time_from }}{% if talk.time_to %} – {{ talk.time_to }}{% endif %}{% endif %}{% if talk.time_from and talk.location %} · {% endif %}{% if talk.location %}{{ talk.location }}{% endif %}</small>
+        {%- endif -%}
+        {%- if talk.url != "" and talk.url %}
+          <br><small><a href="{{ talk.url }}" target="_blank">More info <i class="fas fa-external-link-alt"></i></a></small>
+        {%- endif %}
       </td>
     </tr>
   {% endfor %}
@@ -66,7 +81,13 @@ unless otherwise noted. All are welcome.
   <tbody>
   {% for talk in site.data.events.past %}
     <tr>
-      <td style="white-space: nowrap;">{{ talk.date | date: "%b %-d, %Y" }}</td>
+      <td style="white-space: nowrap;">
+        {% if talk.date_to and talk.date_from != talk.date_to %}
+          {{ talk.date_from | date: "%b %-d" }} – {{ talk.date_to | date: "%b %-d, %Y" }}
+        {% else %}
+          {{ talk.date_from | date: "%b %-d, %Y" }}
+        {% endif %}
+      </td>
       <td style="white-space: nowrap;">
         {{ talk.speaker }}
         <br><small class="text-muted">{{ talk.affiliation }}</small>

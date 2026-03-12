@@ -1,18 +1,42 @@
 upcoming:
-  # - title: "Post-Quantum Cryptography in Practice"
-  #   speaker: "Dr. Jane Smith"
-  #   affiliation: "ETH Zurich"
-  #   date: 2026-04-15
-  #   time: "14:00"
-  #   location: "Gates Hall, Room 417"
-  #   abstract: "We discuss recent advances in deploying lattice-based schemes in real-world protocols."
-  #   url: ""
+  - title: "Mini-course: Introduction to Lattice-based cryptography"
+    speaker: "Prof. Alfred Menezes"
+    affiliation: "University of Waterloo, Canada"
+    date_from: 2026-03-25
+    date_to: 2026-03-29
+    location: "Vietnam Institute for Advanced Study in Mathematics (VIASM), 161 Huynh Thuc Khang Street, Hanoi"
+    abstract: >
+      The public-key cryptographic schemes used in practice to secure communications
+      are known to be completely breakable by quantum computers. Although the timeline
+      for building cryptographically-relevant quantum computers remains uncertain,
+      interest in deploying quantum-resistant cryptosystems has surged. Governments
+      worldwide are promoting standards for quantum-safe cryptography, and industry
+      is beginning to integrate quantum-safe cryptography into their products.
+
+
+      In 2024, the U.S. government's National Institute of Standards and Technology
+      (NIST) published standards for lattice-based key encapsulation and signature
+      schemes, as well as for hash-based signatures. Of these standardized schemes,
+      the lattice-based Kyber key encapsulation mechanism (KEM) and the Dilithium
+      signature scheme are seeing the broadest adoption.
+
+
+      This course introduces lattice-based cryptography, focusing on the design and
+      analysis of the Kyber key encapsulation mechanism. Kyber's security is based on
+      the Module Learning With Errors (MLWE) problem, which involves solving noisy
+      linear equations over a polynomial ring. After describing Kyber, I'll explain
+      its connection to lattice problems. I'll then introduce the LLL lattice basis
+      reduction algorithm, a fundamental tool for analyzing hardness of lattice-based
+      cryptosystems.
+    url: "https://viasm.edu.vn/hdkh/Course-Lattice-Based-Cryptography-2026"
 
   # - title: "New Attacks on Stream Ciphers"
   #   speaker: "Prof. Bob Lee"
   #   affiliation: "KU Leuven"
-  #   date: 2026-05-02
-  #   time: "11:00"
+  #   date_from: 2026-05-02
+  #   date_to: 2026-05-02
+  #   time_from: "11:00"
+  #   time_to: "12:00"
   #   location: "Gates Hall, Room 417"
   #   abstract: ""
   #   url: ""
@@ -21,8 +45,10 @@ past:
   # - title: "Homomorphic Encryption for Private ML"
   #   speaker: "Dr. Mei Li"
   #   affiliation: "ARCANE Lab"
-  #   date: 2026-02-20
-  #   time: "14:00"
+  #   date_from: 2026-02-20
+  #   date_to: 2026-02-20
+  #   time_from: "14:00"
+  #   time_to: "15:00"
   #   location: "Gates Hall, Room 417"
   #   slides: "/assets/slides/li-fhe-ml.pdf"
   #   recording: "https://youtube.com/watch?v=example"
@@ -30,8 +56,10 @@ past:
   # - title: "Obfuscation: Recent Progress and Open Problems"
   #   speaker: "Dr. Jiwon Park"
   #   affiliation: "ARCANE Lab"
-  #   date: 2026-01-15
-  #   time: "14:00"
+  #   date_from: 2026-01-15
+  #   date_to: 2026-01-15
+  #   time_from: "14:00"
+  #   time_to: "15:00"
   #   location: "Gates Hall, Room 417"
   #   slides: ""
   #   recording: ""
