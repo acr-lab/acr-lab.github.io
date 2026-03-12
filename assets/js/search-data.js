@@ -60,11 +60,19 @@ ninja.data = [{
           section: "News",},{id: "news-gs-phan-dương-hiệu-bảo-vệ-tư-duy-bên-trong-để-không-bị-điều-khiển-từ-ngoài",
           title: 'GS Phan Dương Hiệu: Bảo vệ tư duy bên trong để không bị...',
           description: "",
+          section: "News",},{id: "news-we-are-pleased-to-announce-a-mini-course-on-introduction-to-lattice-based-cryptography-to-be-held-march-25-29-2026-the-lectures-will-be-delivered-by-prof-alfred-menezes-for-further-details-please-visit-the-course-page",
+          title: 'We are pleased to announce a mini-course on Introduction to Lattice-Based Cryptography, to...',
+          description: "",
           section: "News",},{id: "people-do-dai-chi",
           title: 'Do_dai_chi',
           description: "",
           section: "People",handler: () => {
               window.location.href = "/people/do_dai_chi/";
+            },},{id: "people-do-dinh-khue",
+          title: 'Do_dinh_khue',
+          description: "",
+          section: "People",handler: () => {
+              window.location.href = "/people/do_dinh_khue/";
             },},{id: "people-do-xuan-thanh",
           title: 'Do_xuan_thanh',
           description: "",
@@ -95,6 +103,11 @@ ninja.data = [{
           description: "",
           section: "People",handler: () => {
               window.location.href = "/people/mac_dang_truong/";
+            },},{id: "people-nguyen-duy-tung-khanh",
+          title: 'Nguyen_duy_tung_khanh',
+          description: "",
+          section: "People",handler: () => {
+              window.location.href = "/people/nguyen_duy_tung_khanh/";
             },},{id: "people-nguyen-quoc-toan",
           title: 'Nguyen_quoc_toan',
           description: "",
