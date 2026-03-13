@@ -113,6 +113,11 @@ ninja.data = [{
           description: "",
           section: "People",handler: () => {
               window.location.href = "/people/nguyen_quoc_toan/";
+            },},{id: "people-pham-ba-duc",
+          title: 'Pham_ba_duc',
+          description: "",
+          section: "People",handler: () => {
+              window.location.href = "/people/pham_ba_duc/";
             },},{id: "people-phan-duong-hieu",
           title: 'Phan_duong_hieu',
           description: "",
