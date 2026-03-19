@@ -28,6 +28,25 @@ For general inquiries, please email us at
   el.innerHTML = '<a href="mailto:' + e + '">' + u + ' [at] ' + d + '</a>';
 </script>
 
+**Join Our Zalo Group**
+
+<div style="display: flex; align-items: flex-start; gap: 1.5rem; flex-wrap: wrap;">
+  <img src="{{ '/assets/img/zalo-qr.jpg' | relative_url }}"
+       alt="Zalo QR Code"
+       style="max-width: 200px; border-radius: 0.25rem;">
+  <div style="padding-top: 0.25rem;">
+    <p style="margin-bottom: 0.75rem;">Stay updated with the latest news and discussions.<br>
+    Scan the QR code or click the button below to join our Zalo group.</p>
+    <a href="https://zalo.me/g/vcvkv7qnispgtbaihpqi" target="_blank"
+       style="color: var(--global-text-color); border: 1px solid var(--global-text-color); padding: 0.375rem 1rem; border-radius: 0.25rem; text-decoration: none; display: inline-block; font-size: 0.875rem; transition: color 0.15s, border-color 0.15s;"
+       onmouseover="this.style.color='var(--global-theme-color)'; this.style.borderColor='var(--global-theme-color)';"
+       onmouseout="this.style.color='var(--global-text-color)'; this.style.borderColor='var(--global-text-color)';">
+      Join Zalo Group
+    </a>
+  </div>
+</div>
+
+
 ---
 
 ## Find Us
