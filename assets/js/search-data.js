@@ -108,6 +108,11 @@ ninja.data = [{
           description: "",
           section: "People",handler: () => {
               window.location.href = "/people/nguyen_duy_tung_khanh/";
+            },},{id: "people-nguyen-ngoc-ky",
+          title: 'Nguyen_ngoc_ky',
+          description: "",
+          section: "People",handler: () => {
+              window.location.href = "/people/nguyen_ngoc_ky/";
             },},{id: "people-nguyen-quoc-toan",
           title: 'Nguyen_quoc_toan',
           description: "",
