@@ -63,7 +63,12 @@ ninja.data = [{
           section: "News",},{id: "news-we-are-pleased-to-announce-a-mini-course-on-introduction-to-lattice-based-cryptography-to-be-held-march-25-29-2026-the-lectures-will-be-delivered-by-prof-alfred-menezes-for-further-details-please-visit-the-course-page",
           title: 'We are pleased to announce a mini-course on Introduction to Lattice-Based Cryptography, to...',
           description: "",
-          section: "News",},{id: "people-do-dai-chi",
+          section: "News",},{id: "people-bui-dung",
+          title: 'Bui_dung',
+          description: "",
+          section: "People",handler: () => {
+              window.location.href = "/people/bui_dung/";
+            },},{id: "people-do-dai-chi",
           title: 'Do_dai_chi',
           description: "",
           section: "People",handler: () => {
