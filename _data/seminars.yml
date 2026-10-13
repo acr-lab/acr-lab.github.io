@@ -11,6 +11,7 @@
 #   title:       talk title                                      (required)
 #   time:        e.g. "14:00 – 15:30"                            (optional)
 #   location:    e.g. "Room C502, VIASM"                         (optional)
+#   mode:        e.g. "Online" for a remote talk, shown as a badge (optional)
 #   affiliation: e.g. "Télécom Paris"                            (optional)
 #   speaker_url: speaker's homepage                              (optional)
 #   type:        e.g. "ACR Seminar", "PhD defense", "Reading group" (optional)
@@ -71,3 +72,13 @@ talks:
       - "https://eprint.iacr.org/2026/298"
       - "https://eprint.iacr.org/2026/237"
       - "https://eprint.iacr.org/2026/1620"
+
+  - date: 2026-08-14
+    time: "10:00 – 11:30"
+    location: "Room C102, VIASM"
+    mode: "Online"
+    speaker: "Phuoc Van Long Pham"
+    affiliation: "Brown University, USA"
+    title: "Survey for Reed-Solomon List Decoding and related topics"
+    abstract: |
+      Since the Stone Age, people have already known that any polynomial of degree d has at most d real solutions, but over finite fields, everything is still chaos. It takes a long time until the Age of Enlightenment, that Lagrange sets his first steps onto the land of finite fields with his theorem, stating that a polynomial of degree d over any finite field still has at most d roots (Lagrange does not even know what is finite field at the time!). Building on this crucial property of polynomials, Irving Reed and Gustave Solomon bring its influence from number theory all the way to information theory, by inventing the Reed-Solomon code. They also did not know at the time that this code became so influential in a field called Zero Knowledge Proofs, especially its list decoding property. Most parameter regimes for list decoding have been explored, by famous algorithms from Berlekamp-Welch to Guruswami-Sudan, but there is still one unknown range, that is from the Johnson Bound 1 − √R to the code capacity 1 − R. This talk acts as a small survey to introduce the techniques of these algorithms, and also introduce the list decoding (open) problem beyond the Johnson bound. There also happens to have a prize tag by the Ethereum Foundation for solving it.
