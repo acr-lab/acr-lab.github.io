@@ -11,6 +11,9 @@
       <span class="seminar-date">{{ t.date | date: '%A, %b %-d, %Y' }}</span>
       {%- if t.time and t.time != '' %} · {{ t.time }}{% endif -%}
       {%- if t.location and t.location != '' %} · {{ t.location }}{% endif -%}
+      {%- if t.mode and t.mode != '' %}
+        <span class="seminar-type seminar-mode"><i class="fa-solid fa-video"></i> {{ t.mode }}</span>
+      {%- endif -%}
       {%- if t.type and t.type != '' %}
         <span class="seminar-type">{{ t.type }}</span>
       {%- endif -%}
