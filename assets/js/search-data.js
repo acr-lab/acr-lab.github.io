@@ -37,6 +37,13 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/activities/";
           },
+        },{id: "nav-seminar",
+          title: "Seminar",
+          description: "Research seminar of the ACR Lab",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/seminar/";
+          },
         },{id: "nav-links",
           title: "Links",
           description: "Useful links for cryptography research and related resources.",
