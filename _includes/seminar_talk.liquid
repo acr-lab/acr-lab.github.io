@@ -1,0 +1,59 @@
+{%- comment -%}
+  Renders one seminar talk from _data/seminars.yml.
+  Parameters:
+    talk     – the talk entry
+    collapse – if true, the abstract is folded behind a "Abstract" toggle (used for past talks)
+{%- endcomment -%}
+{%- assign t = include.talk -%}
+<div class="seminar-talk">
+  <div class="seminar-meta">
+    <span class="seminar-date">{{ t.date | date: '%A, %b %-d, %Y' }}</span>
+    {%- if t.time and t.time != '' %} · {{ t.time }}{% endif -%}
+    {%- if t.location and t.location != '' %} · {{ t.location }}{% endif -%}
+    {%- if t.type and t.type != '' %}
+      <span class="seminar-type">{{ t.type }}</span>
+    {%- endif -%}
+  </div>
+  <div class="seminar-speaker">
+    {%- if t.speaker_url and t.speaker_url != '' -%}
+      <a href="{{ t.speaker_url }}" target="_blank" rel="noopener noreferrer">{{ t.speaker }}</a>
+    {%- else -%}
+      {{ t.speaker }}
+    {%- endif -%}
+    {%- if t.affiliation and t.affiliation != '' %}
+      <span class="seminar-affiliation">({{ t.affiliation }})</span>
+    {%- endif -%}
+  </div>
+  <div class="seminar-title">{{ t.title }}</div>
+  {%- if t.abstract and t.abstract != '' -%}
+    {%- if include.collapse %}
+      <details class="seminar-abstract">
+        <summary>Abstract</summary>
+        {{ t.abstract | markdownify }}
+      </details>
+    {%- else %}
+      <div class="seminar-abstract">
+        {{ t.abstract | markdownify }}
+      </div>
+    {%- endif -%}
+  {%- endif -%}
+  {%- assign has_slides = false -%}
+  {%- if t.slides and t.slides != '' -%}{%- assign has_slides = true -%}{%- endif -%}
+  {%- assign has_video = false -%}
+  {%- if t.video and t.video != '' -%}{%- assign has_video = true -%}{%- endif -%}
+  {%- assign has_url = false -%}
+  {%- if t.url and t.url != '' -%}{%- assign has_url = true -%}{%- endif -%}
+  {%- if has_slides or has_video or has_url %}
+    <div class="seminar-links">
+      {%- if has_slides -%}
+        <a href="{{ t.slides | relative_url }}" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-pdf"></i> Slides</a>
+      {%- endif -%}
+      {%- if has_video -%}
+        <a href="{{ t.video }}" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-video"></i> Video</a>
+      {%- endif -%}
+      {%- if has_url -%}
+        <a href="{{ t.url }}" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square"></i> More info</a>
+      {%- endif -%}
+    </div>
+  {%- endif %}
+</div>

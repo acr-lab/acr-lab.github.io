@@ -4,7 +4,7 @@ title: Contact
 permalink: /contact/
 description: Get in touch with the ACR Lab.
 nav: true
-nav_order: 6
+nav_order: 7
 ---
 
 ## Visit Us

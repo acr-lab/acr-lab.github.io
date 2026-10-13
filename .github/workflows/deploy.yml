@@ -60,6 +60,10 @@ on:
       - "!INSTALL.md"
       - "!README.md"
   workflow_dispatch:
+  # Rebuild every day at 00:00 UTC (07:00 Hanoi) so seminar talks move
+  # from "Upcoming" to "Past" automatically.
+  schedule:
+    - cron: "0 0 * * *"
 
 permissions:
   contents: write
