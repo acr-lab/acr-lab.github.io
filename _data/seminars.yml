@@ -15,6 +15,8 @@
 #   speaker_url: speaker's homepage                              (optional)
 #   type:        e.g. "ACR Seminar", "PhD defense", "Reading group" (optional)
 #   abstract:    Markdown; LaTeX math with $...$ works           (optional)
+#   bio:         short speaker bio, Markdown                     (optional)
+#   paper:       link to the paper, e.g. https://ia.cr/2026/1885 (optional)
 #   slides:      link to PDF, e.g. /assets/slides/2026-11-03.pdf (optional)
 #   video:       link to recording                               (optional)
 #   url:         link to an external event page                  (optional)
@@ -38,3 +40,14 @@
 #    url: ""
 
 talks:
+  - date: 2026-10-22
+    speaker: "Nam Tran"
+    affiliation: "University of Wollongong"
+    title: "Compact Lattice-Based NIZK Arguments for Set Membership and Ring Signatures without RO"
+    abstract: |
+      Zero-knowledge proofs of set membership underpin privacy-preserving constructions such as ring signatures and anonymous credentials. Existing succinct constructions rely mainly on the Fiat--Shamir transform in the Random Oracle Model (ROM), while standard-model non-interactive proofs from post-quantum assumptions remain either generic and inefficient or asymptotically compact yet concretely impractical.
+
+      This talk introduces a compact lattice-based NIZK arguments for set membership in the standard model with proof size logarithmic in the set cardinality. The construction matches the logarithmic proof size of accumulator-based ROM constructions while achieving post-quantum security without random oracles. The main technical tool is a new trapdoor $\Sigma$-protocol (Canetti et al., STOC'19) supporting linear relations modulo multiple heterogeneous moduli, allowing such relations to be handled at their native moduli without homogenization. This yields a modular approach to compact proofs compatible with lattice accumulators. A direct application is a logarithmic-size lattice-based ring signature scheme with provable security under standard lattice assumptions.
+    bio: |
+      Nam Tran is a PhD candidate at the University of Wollongong, under the supervision of Distinguished Prof. Willy Susilo and Associate Prof. Khoa Nguyen. His research interests include post-quantum digital signatures with advanced privacy-preserving features, and (sometimes) cryptanalysis of hard lattice/code-based problems.
+    paper: "https://ia.cr/2026/1885"

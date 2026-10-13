@@ -2,7 +2,7 @@
   Renders one seminar talk from _data/seminars.yml.
   Parameters:
     talk     – the talk entry
-    collapse – if true, the abstract is folded behind a "Abstract" toggle (used for past talks)
+    collapse – if true, the abstract and speaker bio are folded behind a toggle (used for past talks)
 {%- endcomment -%}
 {%- assign t = include.talk -%}
 <div class="seminar-talk">
@@ -25,26 +25,46 @@
     {%- endif -%}
   </div>
   <div class="seminar-title">{{ t.title }}</div>
-  {%- if t.abstract and t.abstract != '' -%}
+  {%- assign has_abstract = false -%}
+  {%- if t.abstract and t.abstract != '' -%}{%- assign has_abstract = true -%}{%- endif -%}
+  {%- assign has_bio = false -%}
+  {%- if t.bio and t.bio != '' -%}{%- assign has_bio = true -%}{%- endif -%}
+  {%- if has_abstract or has_bio -%}
+    {%- capture details_body -%}
+      {%- if has_abstract -%}{{ t.abstract | markdownify }}{%- endif -%}
+      {%- if has_bio -%}
+        <div class="seminar-bio">
+          <div class="seminar-bio-label">About the speaker</div>
+          {{ t.bio | markdownify }}
+        </div>
+      {%- endif -%}
+    {%- endcapture -%}
     {%- if include.collapse %}
       <details class="seminar-abstract">
-        <summary>Abstract</summary>
-        {{ t.abstract | markdownify }}
+        <summary>
+          {% if has_abstract %}Abstract{% else %}About the speaker{% endif %}
+        </summary>
+        {{ details_body }}
       </details>
     {%- else %}
       <div class="seminar-abstract">
-        {{ t.abstract | markdownify }}
+        {{ details_body }}
       </div>
     {%- endif -%}
   {%- endif -%}
+  {%- assign has_paper = false -%}
+  {%- if t.paper and t.paper != '' -%}{%- assign has_paper = true -%}{%- endif -%}
   {%- assign has_slides = false -%}
   {%- if t.slides and t.slides != '' -%}{%- assign has_slides = true -%}{%- endif -%}
   {%- assign has_video = false -%}
   {%- if t.video and t.video != '' -%}{%- assign has_video = true -%}{%- endif -%}
   {%- assign has_url = false -%}
   {%- if t.url and t.url != '' -%}{%- assign has_url = true -%}{%- endif -%}
-  {%- if has_slides or has_video or has_url %}
+  {%- if has_paper or has_slides or has_video or has_url %}
     <div class="seminar-links">
+      {%- if has_paper -%}
+        <a href="{{ t.paper }}" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> Paper</a>
+      {%- endif -%}
       {%- if has_slides -%}
         <a href="{{ t.slides | relative_url }}" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-pdf"></i> Slides</a>
       {%- endif -%}
