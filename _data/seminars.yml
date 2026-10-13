@@ -76,7 +76,6 @@ talks:
   - date: 2026-08-14
     time: "10:00 – 11:30"
     location: "Room C102, VIASM"
-    mode: "Online"
     speaker: "Phuoc Van Long Pham"
     affiliation: "Brown University, USA"
     title: "Survey for Reed-Solomon List Decoding and related topics"
