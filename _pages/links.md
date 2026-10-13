@@ -4,7 +4,7 @@ title: Links
 permalink: /links/
 description: Useful links for cryptography research and related resources.
 nav: true
-nav_order: 5
+nav_order: 6
 ---
 
 **Research Institutions and Universities**

@@ -1,0 +1,40 @@
+# =============================================================================
+# ACR Lab seminar talks
+# =============================================================================
+# Add one entry per talk under `talks:` (order does not matter).
+# The Seminar page (/seminar/) automatically puts talks dated today or later
+# under "Upcoming talks" and older ones under "Past talks", grouped by year.
+#
+# Fields:
+#   date:        YYYY-MM-DD, without quotes                      (required)
+#   speaker:     speaker's name                                  (required)
+#   title:       talk title                                      (required)
+#   time:        e.g. "14:00 – 15:30"                            (optional)
+#   location:    e.g. "Room C502, VIASM"                         (optional)
+#   affiliation: e.g. "Télécom Paris"                            (optional)
+#   speaker_url: speaker's homepage                              (optional)
+#   type:        e.g. "ACR Seminar", "PhD defense", "Reading group" (optional)
+#   abstract:    Markdown; LaTeX math with $...$ works           (optional)
+#   slides:      link to PDF, e.g. /assets/slides/2026-11-03.pdf (optional)
+#   video:       link to recording                               (optional)
+#   url:         link to an external event page                  (optional)
+#
+# Example (remove the leading "# " on each line to activate it):
+#
+#  - date: 2026-11-03
+#    time: "14:00 – 15:30"
+#    location: "Room C502, VIASM"
+#    speaker: "Nguyen Van A"
+#    affiliation: "University X"
+#    speaker_url: "https://example.org"
+#    title: "An introduction to lattice-based signatures"
+#    type: "ACR Seminar"
+#    abstract: |
+#      First paragraph of the abstract. Inline math such as $\mathbb{Z}_q^n$ is supported.
+#
+#      A blank line starts a new paragraph.
+#    slides: ""
+#    video: ""
+#    url: ""
+
+talks:
