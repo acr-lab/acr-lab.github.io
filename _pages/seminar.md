@@ -44,23 +44,28 @@ upcoming; older ones go to "Past talks", grouped by academic year
 {% endif %}
 
 {% if past.size > 0 %}
-{% assign current_ay = "" %}
-{% assign ay_list = "" %}
+{% assign ay_seq = "" %}
 {% for t in past %}
 {% assign y = t.date | date: "%Y" | plus: 0 %}
 {% assign m = t.date | date: "%m" | plus: 0 %}
 {% if m >= 9 %}{% assign ay_start = y %}{% else %}{% assign ay_start = y | minus: 1 %}{% endif %}
 {% assign ay_end = ay_start | plus: 1 %}
-{% capture ay %}{{ ay_start }}–{{ ay_end }}{% endcapture %}
-{% if ay != current_ay %}
-{% assign current_ay = ay %}
-{% assign ay_list = ay_list | append: ay | append: "," %}
+{% capture ay_seq %}{{ ay_seq }}{{ ay_start }}–{{ ay_end }},{% endcapture %}
+{% endfor %}
+{% assign ay_per_talk = ay_seq | split: "," %}
+{% assign ay_array = ay_per_talk | uniq %}
 
-<h2 class="seminar-section" id="past-{{ ay_start }}">Past talks ({{ ay }})</h2>
+<h2 class="seminar-section" id="past-talks">Past talks</h2>
+{% assign current_ay = "" %}
+{% for t in past %}
+{% assign ay = ay_per_talk[forloop.index0] %}
+{% if ay_array.size > 1 and ay != current_ay %}
+{% assign current_ay = ay %}
+
+<h3 class="seminar-ay" id="past-{{ ay | slice: 0, 4 }}">{{ ay }}</h3>
 {% endif %}
 {% include seminar_talk.liquid talk=t %}
 {% endfor %}
-{% assign ay_array = ay_list | split: "," %}
 {% if ay_array.size > 1 %}
 
 <p class="seminar-years">{% for a in ay_array %}<a href="#past-{{ a | slice: 0, 4 }}">({{ a }})</a>{% endfor %}</p>
@@ -71,7 +76,9 @@ upcoming; older ones go to "Past talks", grouped by academic year
   .seminar-section { margin-top: 2rem; margin-bottom: 1rem; }
   .seminar-years { margin-top: 1.5rem; }
   .seminar-years a { margin-right: 0.75rem; }
-  .seminar-talk { padding: 1rem 0 1.1rem; border-bottom: 1px solid var(--global-divider-color); }
+  .seminar-talk.card { margin-bottom: 1.25rem; border: 1px solid var(--global-divider-color); border-radius: 0.5rem; }
+  .seminar-talk .card-body { padding: 1.1rem 1.4rem; }
+  .seminar-ay { margin-top: 1.75rem; margin-bottom: 0.9rem; font-size: 1.25rem; color: var(--global-text-color-light); }
   .seminar-meta { font-size: 0.9rem; color: var(--global-text-color-light); margin-bottom: 0.35rem; }
   .seminar-date { font-weight: 600; color: var(--global-theme-color); }
   .seminar-type {

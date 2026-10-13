@@ -44,7 +44,7 @@
 talks:
   - date: 2026-10-22
     time: "9:00 – 11:00"
-    location: "Room C102, Vietnam Institute for Advanced Study in Mathematics (VIASM), 161 Huynh Thuc Khang Street, Hanoi"
+    location: "Room C102, VIASM"
     speaker: "Nam Tran"
     affiliation: "University of Wollongong"
     title: "Compact Lattice-Based NIZK Arguments for Set Membership and Ring Signatures without RO"
