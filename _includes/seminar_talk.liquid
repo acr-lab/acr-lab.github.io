@@ -54,16 +54,23 @@
   {%- endif -%}
   {%- assign has_paper = false -%}
   {%- if t.paper and t.paper != '' -%}{%- assign has_paper = true -%}{%- endif -%}
+  {%- assign has_papers = false -%}
+  {%- if t.papers and t.papers.size > 0 -%}{%- assign has_papers = true -%}{%- endif -%}
   {%- assign has_slides = false -%}
   {%- if t.slides and t.slides != '' -%}{%- assign has_slides = true -%}{%- endif -%}
   {%- assign has_video = false -%}
   {%- if t.video and t.video != '' -%}{%- assign has_video = true -%}{%- endif -%}
   {%- assign has_url = false -%}
   {%- if t.url and t.url != '' -%}{%- assign has_url = true -%}{%- endif -%}
-  {%- if has_paper or has_slides or has_video or has_url %}
+  {%- if has_paper or has_papers or has_slides or has_video or has_url %}
     <div class="seminar-links">
       {%- if has_paper -%}
         <a href="{{ t.paper }}" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> Paper</a>
+      {%- endif -%}
+      {%- if has_papers -%}
+        {%- for p in t.papers -%}
+          <a href="{{ p }}" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> Paper [{{ forloop.index }}]</a>
+        {%- endfor -%}
       {%- endif -%}
       {%- if has_slides -%}
         <a href="{{ t.slides | relative_url }}" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-pdf"></i> Slides</a>
