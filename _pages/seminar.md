@@ -12,7 +12,8 @@ If you would like to give a talk, please [contact us]({{ '/contact/' | relative_
 
 {%- comment -%}
 Talks live in \_data/seminars.yml. Talks dated today or later are listed as
-upcoming; older ones go to "Past talks", grouped by year (newest first).
+upcoming; older ones go to "Past talks", grouped by academic year
+(September to August, newest first), as on the LIP6 ALMASTY seminar page.
 "Today" is the date of the last site build (the deploy workflow rebuilds daily).
 {%- endcomment -%}
 {%- assign today = site.time | date: "%Y%m%d" | plus: 0 -%}
@@ -29,8 +30,7 @@ upcoming; older ones go to "Past talks", grouped by year (newest first).
 {%- endif -%}
 {%- endfor -%}
 {%- endif -%}
-{%- assign past = past | reverse -%}
-{%- assign past_by_year = past | group_by_exp: "t", "t.date | date: '%Y'" %}
+{%- assign past = past | reverse %}
 
 <h2 class="seminar-section">Upcoming talks</h2>
 
@@ -44,22 +44,32 @@ upcoming; older ones go to "Past talks", grouped by year (newest first).
 {% endif %}
 
 {% if past.size > 0 %}
+{% assign current_ay = "" %}
+{% assign ay_list = "" %}
+{% for t in past %}
+{% assign y = t.date | date: "%Y" | plus: 0 %}
+{% assign m = t.date | date: "%m" | plus: 0 %}
+{% if m >= 9 %}{% assign ay_start = y %}{% else %}{% assign ay_start = y | minus: 1 %}{% endif %}
+{% assign ay_end = ay_start | plus: 1 %}
+{% capture ay %}{{ ay_start }}–{{ ay_end }}{% endcapture %}
+{% if ay != current_ay %}
+{% assign current_ay = ay %}
+{% assign ay_list = ay_list | append: ay | append: "," %}
 
-<h2 class="seminar-section" id="past-talks">Past talks</h2>
-{% if past_by_year.size > 1 %}
-<p class="seminar-years">{% for y in past_by_year %}<a href="#past-{{ y.name }}">{{ y.name }}</a>{% endfor %}</p>
+<h2 class="seminar-section" id="past-{{ ay_start }}">Past talks ({{ ay }})</h2>
 {% endif %}
-{% for y in past_by_year %}
-<h3 class="seminar-year" id="past-{{ y.name }}">{{ y.name }}</h3>
-{% for t in y.items %}
-{% include seminar_talk.liquid talk=t collapse=true %}
+{% include seminar_talk.liquid talk=t %}
 {% endfor %}
-{% endfor %}
+{% assign ay_array = ay_list | split: "," %}
+{% if ay_array.size > 1 %}
+
+<p class="seminar-years">{% for a in ay_array %}<a href="#past-{{ a | slice: 0, 4 }}">({{ a }})</a>{% endfor %}</p>
+{% endif %}
 {% endif %}
 
 <style>
   .seminar-section { margin-top: 2rem; margin-bottom: 1rem; }
-  .seminar-year { margin-top: 1.75rem; font-size: 1.25rem; color: var(--global-text-color-light); }
+  .seminar-years { margin-top: 1.5rem; }
   .seminar-years a { margin-right: 0.75rem; }
   .seminar-talk { padding: 1rem 0 1.1rem; border-bottom: 1px solid var(--global-divider-color); }
   .seminar-meta { font-size: 0.9rem; color: var(--global-text-color-light); margin-bottom: 0.35rem; }

@@ -17,6 +17,8 @@
 #   abstract:    Markdown; LaTeX math with $...$ works           (optional)
 #   bio:         short speaker bio, Markdown                     (optional)
 #   paper:       link to the paper, e.g. https://ia.cr/2026/1885 (optional)
+#   papers:      several paper links, shown as "Paper [1]", "Paper [2]", ...
+#                (one "- https://..." line each; numbering follows the list)  (optional)
 #   slides:      link to PDF, e.g. /assets/slides/2026-11-03.pdf (optional)
 #   video:       link to recording                               (optional)
 #   url:         link to an external event page                  (optional)
@@ -53,3 +55,17 @@ talks:
     bio: |
       Nam Tran is a PhD candidate at the University of Wollongong, under the supervision of Distinguished Prof. Willy Susilo and Associate Prof. Khoa Nguyen. His research interests include post-quantum digital signatures with advanced privacy-preserving features, and (sometimes) cryptanalysis of hard lattice/code-based problems.
     paper: "https://ia.cr/2026/1885"
+
+  - date: 2026-09-24
+    time: "14:00 – 15:30"
+    location: "Room C102, VIASM"
+    speaker: "Thai Hung Le"
+    affiliation: "Télécom Paris and École normale supérieure-PSL, France"
+    title: "Recent progress in cryptanalysis of multivariate-based cryptography"
+    abstract: |
+      Post-quantum cryptography aims to develop cryptographic schemes secure against quantum adversaries. One promising class of digital signature schemes is based on multivariate quadratic equations, of which Unbalanced Oil and Vinegar (UOV) is a leading example. UOV has been extensively studied since its introduction in 1998, and it has remained secure. It offers very small signatures but suffers from very large public keys. To address this issue, some variants, such as MAYO, QR-UOV, and SNOVA, introduce additional structure to reduce the size of the public key. These four multivariate signature schemes are among the candidates in the Third round of NIST’s Additional Call for Post-Quantum Digital Signature Schemes. In this talk, we revisit recent cryptanalytic efforts targeting UOV and its variants, in particular the wedge attack [1] and subsequent extensions [2, 3, 4]. We will discuss the main ideas behind these attacks and their implications for multivariate cryptography.
+    papers:
+      - "https://eprint.iacr.org/2025/1143.pdf"
+      - "https://eprint.iacr.org/2026/298"
+      - "https://eprint.iacr.org/2026/237"
+      - "https://eprint.iacr.org/2026/1620"
