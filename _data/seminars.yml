@@ -81,3 +81,17 @@ talks:
     title: "Survey for Reed-Solomon List Decoding and related topics"
     abstract: |
       Since the Stone Age, people have already known that any polynomial of degree d has at most d real solutions, but over finite fields, everything is still chaos. It takes a long time until the Age of Enlightenment, that Lagrange sets his first steps onto the land of finite fields with his theorem, stating that a polynomial of degree d over any finite field still has at most d roots (Lagrange does not even know what is finite field at the time!). Building on this crucial property of polynomials, Irving Reed and Gustave Solomon bring its influence from number theory all the way to information theory, by inventing the Reed-Solomon code. They also did not know at the time that this code became so influential in a field called Zero Knowledge Proofs, especially its list decoding property. Most parameter regimes for list decoding have been explored, by famous algorithms from Berlekamp-Welch to Guruswami-Sudan, but there is still one unknown range, that is from the Johnson Bound 1 − √R to the code capacity 1 − R. This talk acts as a small survey to introduce the techniques of these algorithms, and also introduce the list decoding (open) problem beyond the Johnson bound. There also happens to have a prize tag by the Ethereum Foundation for solving it.
+
+  - date: 2026-07-30
+    time: "15:30 – 16:30"
+    location: "Room A204, VIASM"
+    speaker: "Duy Nguyen"
+    affiliation: "Telecom Paris, France"
+    title: "Splitting Bilinear Groups: New Translations from Composite- to Prime-Order with Applications to Batch Arguments for NP"
+    abstract: |
+      Bilinear groups, also known as pairing groups, are a versatile tool that enables many efficient cryptographic constructions. Among bilinear groups, those with a composite order (𝑁 = 𝑝 ∙ 𝑞 for two large, secret primes 𝑝, 𝑞) offer an additional algebraic structure which is advantageous in many applications. They are however dramatically less efficient than their prime-order counterparts, so multiple translation frameworks for constructions from composite- to prime-order groups have been introduced in the literature.
+
+      Motivated by the recent construction of Batch Arguments for NP (BARGs) with linear-size CRS by Chen, Elias and Wu [Asiacrypt ’25], based on composite-order groups, we notice that these previous frameworks fail to transfer their scheme to the prime-order setting. In this work, we identify and close this gap by introducing a new translation framework based on a new abstraction called dual encodings. The crucial feature of these objects is a security property called indistinguishability that allows embedding hidden subgroups, emulating composite-order groups more faithfully and thus enabling more powerful translations. Then, we realize dual encodings using functional encryption for function-hiding inner products. Finally, we apply our framework to build the first BARG with linearsize CRS from prime-order groups, while preserving the (statistical) somewhere extractability of previous constructions. Our result represents a significant step toward practically efficient BARGs and showcases a surprising application of functional encryption which we find of independent interest.
+
+      This is a joint work with David Balbás (ETH Zurich) and Dario Fiore (IMDEA Software Institute).
+    paper: "https://ia.cr/2026/1564"
