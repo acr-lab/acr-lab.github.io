@@ -154,3 +154,14 @@ talks:
     bio: |
       Dung is a postdoctoral researcher at LIP6, Sorbonne Université, France. She completed her PhD at IRIF, Université Paris Cité. Her research interests are cryptography, including secure multiparty computation, zero-knowledge proofs, and post-quantum cryptography.
     paper: "https://eprint.iacr.org/2024/1766"
+
+  - date: 2026-05-19
+    time: "10:00 – 11:00"
+    location: "Room C101, VIASM"
+    speaker: "Prof. Yvo G. Desmedt"
+    affiliation: "The University of Texas at Dallas, USA"
+    title: "Computations with Weyl Algebra"
+    abstract: |
+      A classical computer uses Boolean circuits and can only operate on one input at a time. Quantum computers compute on a superposition of states, but need a measurement to extract the result. In this presentation we propose the use of Weyl Algebra to perform computations on N inputs at once. We also need a generalization of a "measurement" to obtain a useful result. Although this new type of computation is inspired by quantum computers, we do not need to follow the laws of quantum physics. We look at the computational complexity of certain computation when using this new approach. In particular at (i) the potential impact on porting Shor's quantum algorithm to a classical computer while maintaining polynomial running time, and (ii) whether co-NP=P, which would imply NP=P.
+    bio: |
+      Yvo Desmedt received his Ph.D. (Summa cum Laude) from the University of Leuven, Belgium (1984). At present he is Jonsson Distinguished Professor at the University of Texas at Dallas. He has held visiting appointments at AIST (Japan), Macquarie University (Australia), Technion (Israel), Tokyo Institute of Technology (Japan), Universite de Montreal (Canada), University of Karlsruhe (Germany), etc. He is the Editor-in-chief of IET Information Security. He was program chair of Crypto 1994, the ACM workshop on Scientific Aspects of Cyber Terrorism 2002, PKC 2003, ICITS 2007, ISC 2013, and co-program chair of CANS 2005. He was an invited speaker at conferences and workshop in 5 continents. He has authored over 200 refereed papers, of which 182 listed on DBLP. He is a Fellow of the International Association of Cryptologic Research (IACR), since 2010, and since 2016 Foreign Member of the Royal Flemish Academy of Belgium for Science and the Arts.
