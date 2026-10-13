@@ -181,3 +181,18 @@ talks:
       To better understand the importance of mathematics in the analysis of cryptosystems, we briefly explain the breaking of the Merkle-Hellman basic knapsack scheme, which was the fastest public key cryptosystem in the 1970s.
     bio: |
       Yvo Desmedt received his Ph.D. (Summa cum Laude) from the University of Leuven, Belgium (1984). At present he is Jonsson Distinguished Professor at the University of Texas at Dallas. He has held visiting appointments at AIST (Japan), Macquarie University (Australia), Technion (Israel), Tokyo Institute of Technology (Japan), Universite de Montreal (Canada), University of Karlsruhe (Germany), etc. He is the Editor-in-chief of IET Information Security. He was program chair of Crypto 1994, the ACM workshop on Scientific Aspects of Cyber Terrorism 2002, PKC 2003, ICITS 2007, ISC 2013, and co-program chair of CANS 2005. He was an invited speaker at conferences and workshop in 5 continents. He has authored over 200 refereed papers, of which 182 listed on DBLP. He is a Fellow of the International Association of Cryptologic Research (IACR), since 2010, and since 2016 Foreign Member of the Royal Flemish Academy of Belgium for Science and the Arts.
+
+  - date: 2026-06-12
+    time: "15:00 – 16:30"
+    location: "Room A204, VIASM"
+    speaker: "Prof. Yvo Desmedt"
+    affiliation: "The University of Texas at Dallas, USA"
+    title: "Cryptography: A Cautionary Viewpoint"
+    abstract: |
+      The explosion of conferences, publications, etc. in the area of cryptology might create the false impression proper progress is being made. However, when taking a closeup look at the history of modern cryptology, one might start to question this optimism. To justify the need for a cautionary viewpoint, we be put forward several arguments that question the aforementioned optimism. The consequences of overconfidence might be far reaching.
+
+      We see that (i) many first generation public key systems were broken due to a massive research effort on cryptanalysis (then, roughly 40% of the papers at Crypto were on cryptanalysis); (ii) the last fundamental progress on factoring on a classical computer goes back to 1990; (iii) our current NIST standards for public key systems are being replaced by post-quantum ones, however without having the top universities analyze the security of the systems being proposed.
+
+      Alternatives to the current approach of the research in cryptology will be proposed, which hopefully may lead to a better foundation for future cryptosystems.
+
+      Note: This is an updated version of the speaker's keynote at the 2023 INSEC WORLD conference.
