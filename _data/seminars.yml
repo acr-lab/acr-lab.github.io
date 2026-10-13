@@ -64,6 +64,8 @@ talks:
     title: "Recent progress in cryptanalysis of multivariate-based cryptography"
     abstract: |
       Post-quantum cryptography aims to develop cryptographic schemes secure against quantum adversaries. One promising class of digital signature schemes is based on multivariate quadratic equations, of which Unbalanced Oil and Vinegar (UOV) is a leading example. UOV has been extensively studied since its introduction in 1998, and it has remained secure. It offers very small signatures but suffers from very large public keys. To address this issue, some variants, such as MAYO, QR-UOV, and SNOVA, introduce additional structure to reduce the size of the public key. These four multivariate signature schemes are among the candidates in the Third round of NIST’s Additional Call for Post-Quantum Digital Signature Schemes. In this talk, we revisit recent cryptanalytic efforts targeting UOV and its variants, in particular the wedge attack [1] and subsequent extensions [2, 3, 4]. We will discuss the main ideas behind these attacks and their implications for multivariate cryptography.
+    bio: |
+      Thai Hung LE is a PhD student at Télécom Paris and École normale supérieure-PSL, France. His research focuses on the algebraic cryptanalysis of post-quantum cryptography.
     papers:
       - "https://eprint.iacr.org/2025/1143.pdf"
       - "https://eprint.iacr.org/2026/298"
