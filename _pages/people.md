@@ -7,8 +7,8 @@ nav: true
 nav_order: 2
 ---
 
-{% assign roles = "advisor|director|researcher|postdoc|phd|masters|undergrad" | split: "|" %}
-{% assign role_names = "Scientific Advisory Board|Directors|Core Members|Postdoctoral Fellows|PhD Students|Masters Students|Undergraduate Researchers" | split: "|" %}
+{% assign roles = "advisor|director|researcher|postdoc|phd|masters|undergrad|intern" | split: "|" %}
+{% assign role_names = "Scientific Advisory Board|Directors|Core Members|Postdoctoral Fellows|PhD Students|Masters Students|Undergraduate Researchers|Interns" | split: "|" %}
 
 {% for role in roles %}
   {% assign members = "" | split: "" %}
