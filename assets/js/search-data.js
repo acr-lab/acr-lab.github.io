@@ -120,6 +120,11 @@ ninja.data = [{
           description: "",
           section: "People",handler: () => {
               window.location.href = "/people/nguyen_duy_tung_khanh/";
+            },},{id: "people-nguyen-ngoc-kiet",
+          title: 'Nguyen_ngoc_kiet',
+          description: "",
+          section: "People",handler: () => {
+              window.location.href = "/people/nguyen_ngoc_kiet/";
             },},{id: "people-nguyen-ngoc-ky",
           title: 'Nguyen_ngoc_ky',
           description: "",
@@ -145,6 +150,11 @@ ninja.data = [{
           description: "",
           section: "People",handler: () => {
               window.location.href = "/people/phan_duong_hieu/";
+            },},{id: "people-vu-minh-chau",
+          title: 'Vu_minh_chau',
+          description: "",
+          section: "People",handler: () => {
+              window.location.href = "/people/vu_minh_chau/";
             },},{id: "people-vu-quoc-huy",
           title: 'Vu_quoc_huy',
           description: "",
