@@ -2,6 +2,10 @@ upcoming:
   # - title: "New Attacks on Stream Ciphers"
   #   speaker: "Prof. Bob Lee"
   #   affiliation: "KU Leuven"
+  #   # several speakers: use a list instead of speaker/affiliation
+  #   # speakers:
+  #   #   - name: "..."
+  #   #     affiliation: "..."
   #   date_from: 2026-05-02
   #   date_to: 2026-05-02
   #   time_from: "11:00"
@@ -11,6 +15,25 @@ upcoming:
   #   url: ""
 
 past:
+  - title: "IACR-VIASM Summer School on Cryptography 2026"
+    speakers:
+      - name: "Ilaria Chilotti"
+        affiliation: "DESILO, Seoul, Republic of Korea"
+      - name: "Claude Crépeau"
+        affiliation: "École de technologie supérieure & McGill University, Canada"
+      - name: "Thomas Debris-Alazard"
+        affiliation: "École Polytechnique, Palaiseau, France"
+      - name: "Alex Bredariol Grilo"
+        affiliation: "LIP6 (CNRS/Sorbonne Université), France"
+      - name: "Ky Nguyen"
+        affiliation: "LIP6 (CNRS/Sorbonne Université), France"
+      - name: "Phan Dương Hiệu"
+        affiliation: "Telecom Paris, Institut Polytechnique de Paris, France"
+    date_from: 2026-08-22
+    date_to: 2026-08-28
+    location: "Vietnam Institute for Advanced Study in Mathematics (VIASM), 161 Huynh Thuc Khang Street, Lang Ward, Hanoi"
+    url: "https://viasm.edu.vn/en/hdkh/IACR-VIASM-School-2026"
+
   - title: "Mini-course: Secret Sharing, Threshold Cryptography and their Applications"
     speaker: "Prof. Desmedt Gaston Yvo"
     affiliation: "The University of Texas at Dallas, USA"

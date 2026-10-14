@@ -36,10 +36,21 @@ unless otherwise noted. All are welcome.
           {{ talk.date_from | date: "%b %-d, %Y" }}
         {% endif %}
       </td>
-      <td style="white-space: nowrap;">
-        {{ talk.speaker }}
-        <br><small class="text-muted">{{ talk.affiliation }}</small>
-      </td>
+      {% if talk.speakers %}
+        <td style="min-width: 15rem;">
+          {% for sp in talk.speakers %}
+            <div class="mb-2">
+              {{ sp.name }}
+              {% if sp.affiliation %}<br><small class="text-muted">{{ sp.affiliation }}</small>{% endif %}
+            </div>
+          {% endfor %}
+        </td>
+      {% else %}
+        <td style="white-space: nowrap;">
+          {{ talk.speaker }}
+          <br><small class="text-muted">{{ talk.affiliation }}</small>
+        </td>
+      {% endif %}
       <td>
         {%- if talk.abstract != "" and talk.abstract -%}
           <details style="margin:0;padding:0;">
@@ -89,10 +100,21 @@ unless otherwise noted. All are welcome.
           {{ talk.date_from | date: "%b %-d, %Y" }}
         {% endif %}
       </td>
-      <td style="white-space: nowrap;">
-        {{ talk.speaker }}
-        <br><small class="text-muted">{{ talk.affiliation }}</small>
-      </td>
+      {% if talk.speakers %}
+        <td style="min-width: 15rem;">
+          {% for sp in talk.speakers %}
+            <div class="mb-2">
+              {{ sp.name }}
+              {% if sp.affiliation %}<br><small class="text-muted">{{ sp.affiliation }}</small>{% endif %}
+            </div>
+          {% endfor %}
+        </td>
+      {% else %}
+        <td style="white-space: nowrap;">
+          {{ talk.speaker }}
+          <br><small class="text-muted">{{ talk.affiliation }}</small>
+        </td>
+      {% endif %}
       <td>
         {%- if talk.abstract != "" and talk.abstract -%}
           <details style="margin:0;padding:0;">
