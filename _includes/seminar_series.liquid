@@ -1,0 +1,53 @@
+{%- comment -%}
+  Renders one recurring seminar series from `series:` in _data/seminars.yml.
+  Parameters:
+    series – the series entry
+    today  – build date as a YYYYMMDD number (sessions before it are shown as past)
+{%- endcomment -%}
+{%- assign s = include.series -%}
+{%- assign first_session = s.sessions | first -%}
+{%- assign next_found = false -%}
+<div class="seminar-talk card seminar-series">
+  <div class="card-body">
+    <div class="seminar-meta">
+      {%- if first_session -%}
+        <span class="seminar-date">Every {{ first_session | date: '%A' }}</span>
+      {%- endif -%}
+      {%- if s.time and s.time != '' %} · {{ s.time }}{% endif -%}
+      {%- if s.location and s.location != '' %} · {{ s.location }}{% endif -%}
+      {%- if s.mode and s.mode != '' %} · {{ s.mode }}{% endif -%}
+    </div>
+    {%- if s.title and s.title != '' %}
+      <div class="seminar-title">{{ s.title }}</div>
+    {%- endif -%}
+    {%- if s.speaker and s.speaker != '' %}
+      <div class="seminar-series-speaker">{{ s.speaker }}</div>
+    {%- endif -%}
+    {%- if s.abstract and s.abstract != '' %}
+      <div class="seminar-abstract">
+        {{ s.abstract | markdownify }}
+      </div>
+    {%- endif -%}
+    {%- if s.sessions and s.sessions.size > 0 %}
+      <div class="seminar-sessions">
+        <span class="seminar-sessions-label">Sessions {{ s.sessions | last | date: '%Y' }}</span>
+        {%- for d in s.sessions -%}
+          {%- assign dn = d | date: '%Y%m%d' | plus: 0 -%}
+          {%- if dn < include.today -%}
+            <span class="seminar-session past" title="Past session">{{ d | date: '%b %-d' }}</span>
+          {%- elsif next_found == false -%}
+            {%- assign next_found = true -%}
+            <span class="seminar-session next" title="Next session">{{ d | date: '%b %-d' }}</span>
+          {%- else -%}
+            <span class="seminar-session">{{ d | date: '%b %-d' }}</span>
+          {%- endif -%}
+        {%- endfor %}
+      </div>
+    {%- endif -%}
+    {%- if s.url and s.url != '' %}
+      <div class="seminar-links">
+        <a href="{{ s.url }}" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square"></i> More info</a>
+      </div>
+    {%- endif %}
+  </div>
+</div>
