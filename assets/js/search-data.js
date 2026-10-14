@@ -130,6 +130,11 @@ ninja.data = [{
           description: "",
           section: "People",handler: () => {
               window.location.href = "/people/nguyen_quoc_toan/";
+            },},{id: "people-nguyen-viet-sang",
+          title: 'Nguyen_viet_sang',
+          description: "",
+          section: "People",handler: () => {
+              window.location.href = "/people/nguyen_viet_sang/";
             },},{id: "people-pham-ba-duc",
           title: 'Pham_ba_duc',
           description: "",
