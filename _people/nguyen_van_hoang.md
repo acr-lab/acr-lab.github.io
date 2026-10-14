@@ -1,7 +1,8 @@
 ---
 name: Nguyen Van Hoang
 role: intern
-github: hachiware67
+email: hoangtantaoa911@gmail.com
+website: https://github.com/hachiware67
 bio: >
   Ho Chi Minh City University of Technology.
 order: 5
