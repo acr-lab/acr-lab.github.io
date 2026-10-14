@@ -100,6 +100,11 @@ ninja.data = [{
           description: "",
           section: "People",handler: () => {
               window.location.href = "/people/hoang_van_thuc/";
+            },},{id: "people-le-duy-hoang",
+          title: 'Le_duy_hoang',
+          description: "",
+          section: "People",handler: () => {
+              window.location.href = "/people/le_duy_hoang/";
             },},{id: "people-le-minh-ha",
           title: 'Le_minh_ha',
           description: "",
@@ -130,11 +135,21 @@ ninja.data = [{
           description: "",
           section: "People",handler: () => {
               window.location.href = "/people/nguyen_ngoc_ky/";
+            },},{id: "people-nguyen-quang-quy",
+          title: 'Nguyen_quang_quy',
+          description: "",
+          section: "People",handler: () => {
+              window.location.href = "/people/nguyen_quang_quy/";
             },},{id: "people-nguyen-quoc-toan",
           title: 'Nguyen_quoc_toan',
           description: "",
           section: "People",handler: () => {
               window.location.href = "/people/nguyen_quoc_toan/";
+            },},{id: "people-nguyen-van-hoang",
+          title: 'Nguyen_van_hoang',
+          description: "",
+          section: "People",handler: () => {
+              window.location.href = "/people/nguyen_van_hoang/";
             },},{id: "people-nguyen-viet-sang",
           title: 'Nguyen_viet_sang',
           description: "",
