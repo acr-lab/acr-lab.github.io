@@ -87,6 +87,11 @@ ninja.data = [{
           description: "",
           section: "People",handler: () => {
               window.location.href = "/people/bui_dung/";
+            },},{id: "people-chu-hien",
+          title: 'Chu_hien',
+          description: "",
+          section: "People",handler: () => {
+              window.location.href = "/people/chu_hien/";
             },},{id: "people-do-dai-chi",
           title: 'Do_dai_chi',
           description: "",
