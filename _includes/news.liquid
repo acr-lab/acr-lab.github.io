@@ -1,12 +1,24 @@
 <div class="news">
   {% if site.news != blank %}
     {% assign news_size = site.news | size %}
-    <div
-      class="table-responsive"
-      {% if include.limit and page.announcements.scrollable and news_size > 3 %}
-        style="max-height: 22rem; overflow-y: auto; border-bottom: 1px solid var(--global-divider-color);"
-      {% endif %}
-    >
+    {% assign news_scroll = false %}
+    {% if include.limit and page.announcements.scrollable and news_size > 3 %}
+      {% assign news_scroll = true %}
+      <style>
+        /* Scrollable news box: scrolls with wheel/touch, scrollbar hidden */
+        .news-scroll {
+          max-height: 22rem;
+          overflow-y: auto;
+          border-bottom: 1px solid var(--global-divider-color);
+          scrollbar-width: none; /* Firefox */
+          -ms-overflow-style: none; /* old Edge */
+        }
+        .news-scroll::-webkit-scrollbar {
+          display: none; /* Chrome, Safari, Edge */
+        }
+      </style>
+    {% endif %}
+    <div class="table-responsive{% if news_scroll %} news-scroll{% endif %}">
       <table class="table table-sm table-borderless">
         {% assign news = site.news | reverse %}
         {% if include.limit and page.announcements.limit %}
