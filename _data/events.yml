@@ -11,6 +11,14 @@ upcoming:
   #   url: ""
 
 past:
+  - title: "Mini-course: Secret Sharing, Threshold Cryptography and their Applications"
+    speaker: "Prof. Desmedt Gaston Yvo"
+    affiliation: "The University of Texas at Dallas, USA"
+    date_from: 2026-06-03
+    date_to: 2026-06-05
+    location: "Vietnam Institute for Advanced Study in Mathematics (VIASM), 161 Huynh Thuc Khang Street, Lang Ward, Hanoi"
+    url: "https://viasm.edu.vn/hdkh/secret-sharing-crypto-app-2026"
+
   - title: "Mini-course: Introduction to Lattice-based cryptography"
     speaker: "Prof. Alfred Menezes"
     affiliation: "University of Waterloo, Canada"
