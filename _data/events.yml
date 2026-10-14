@@ -1,4 +1,16 @@
 upcoming:
+  # - title: "New Attacks on Stream Ciphers"
+  #   speaker: "Prof. Bob Lee"
+  #   affiliation: "KU Leuven"
+  #   date_from: 2026-05-02
+  #   date_to: 2026-05-02
+  #   time_from: "11:00"
+  #   time_to: "12:00"
+  #   location: "Gates Hall, Room 417"
+  #   abstract: ""
+  #   url: ""
+
+past:
   - title: "Mini-course: Introduction to Lattice-based cryptography"
     speaker: "Prof. Alfred Menezes"
     affiliation: "University of Waterloo, Canada"
@@ -30,18 +42,6 @@ upcoming:
       cryptosystems.
     url: "https://viasm.edu.vn/hdkh/Course-Lattice-Based-Cryptography-2026"
 
-  # - title: "New Attacks on Stream Ciphers"
-  #   speaker: "Prof. Bob Lee"
-  #   affiliation: "KU Leuven"
-  #   date_from: 2026-05-02
-  #   date_to: 2026-05-02
-  #   time_from: "11:00"
-  #   time_to: "12:00"
-  #   location: "Gates Hall, Room 417"
-  #   abstract: ""
-  #   url: ""
-
-past:
   # - title: "Homomorphic Encryption for Private ML"
   #   speaker: "Dr. Mei Li"
   #   affiliation: "ARCANE Lab"
