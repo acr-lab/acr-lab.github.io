@@ -10,5 +10,5 @@ interests:
   - Secure Multiparty Computation
   - Zero-knowledge Proofs
   - Post-quantum Cryptography
-order: 4
+order: 2
 ---
