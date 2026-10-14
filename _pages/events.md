@@ -50,7 +50,7 @@ unless otherwise noted. All are welcome.
           <strong>{{ talk.title }}</strong>
         {%- endif -%}
         {%- if talk.time_from or talk.location %}
-          <small class="text-muted">{% if talk.time_from %}{{ talk.time_from }}{% if talk.time_to %} – {{ talk.time_to }}{% endif %}{% endif %}{% if talk.time_from and talk.location %} · {% endif %}{% if talk.location %}{{ talk.location }}{% endif %}</small>
+          <small class="text-muted d-block">{% if talk.time_from %}{{ talk.time_from }}{% if talk.time_to %} – {{ talk.time_to }}{% endif %}{% endif %}{% if talk.time_from and talk.location %} · {% endif %}{% if talk.location %}{{ talk.location }}{% endif %}</small>
         {%- endif -%}
         {%- if talk.url != "" and talk.url %}
           <br><small><a href="{{ talk.url }}" target="_blank">More info <i class="fas fa-external-link-alt"></i></a></small>
@@ -103,7 +103,7 @@ unless otherwise noted. All are welcome.
           <strong>{{ talk.title }}</strong>
         {%- endif -%}
         {%- if talk.time_from or talk.location %}
-          <small class="text-muted">{% if talk.time_from %}{{ talk.time_from }}{% if talk.time_to %} – {{ talk.time_to }}{% endif %}{% endif %}{% if talk.time_from and talk.location %} · {% endif %}{% if talk.location %}{{ talk.location }}{% endif %}</small>
+          <small class="text-muted d-block">{% if talk.time_from %}{{ talk.time_from }}{% if talk.time_to %} – {{ talk.time_to }}{% endif %}{% endif %}{% if talk.time_from and talk.location %} · {% endif %}{% if talk.location %}{{ talk.location }}{% endif %}</small>
         {%- endif -%}
       </td>
       <td style="white-space: nowrap;">
