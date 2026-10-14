@@ -43,6 +43,35 @@
 #    video: ""
 #    url: ""
 
+# -----------------------------------------------------------------------------
+# Recurring seminar series, shown in their own section ABOVE "Upcoming talks".
+# One entry per series; `sessions` lists every meeting date (YYYY-MM-DD).
+# Past sessions are greyed out and the next one is highlighted automatically.
+# -----------------------------------------------------------------------------
+series:
+  - name: "2026 Latticed Based Cryptography Weekly"
+    title: "Introduction to Lattice"
+    speaker: "The seminar members take turns presenting each week."
+    time: "14:00 – 16:00"
+    location: "Room C101, VIASM"
+    mode: "In person"
+    abstract: |
+      Post-quantum cryptography aims to develop cryptographic schemes secure against quantum adversaries. Lattice-based cryptography is currently its most prominent approach, and it is the basis of NIST's standard for key encapsulation, Kyber (ML-KEM). In this talk, we revisit the foundations of this area following the book A Gentle Introduction to Lattice-Based Cryptography by Alfred Menezes. We start from lattices and their basic problems (SVP and CVP), then introduce the Short Integer Solution (SIS) and Learning With Errors (LWE) problems, and show how LWE yields a simple public-key encryption scheme. We then see how this idea leads to Kyber, and how lattice basis reduction (LLL and BKZ) is used to attack these problems and choose parameters. The talk is introductory and requires only linear algebra and basic probability.
+    sessions:
+      - 2026-10-09
+      - 2026-10-16
+      - 2026-10-23
+      - 2026-10-30
+      - 2026-11-06
+      - 2026-11-13
+      - 2026-11-20
+      - 2026-11-27
+      - 2026-12-04
+      - 2026-12-11
+      - 2026-12-18
+      - 2026-12-25
+    url: "https://viasm.edu.vn/hdkh/ACRLab-seminar"
+
 talks:
   - date: 2026-10-22
     time: "9:00 – 11:00"

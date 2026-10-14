@@ -32,6 +32,12 @@ upcoming; older ones go to "Past talks", grouped by academic year
 {%- endif -%}
 {%- assign past = past | reverse %}
 
+{% for series in site.data.seminars.series %}
+
+<h2 class="seminar-section" id="{{ series.name | slugify }}">{{ series.name }}</h2>
+{% include seminar_series.liquid series=series today=today %}
+{% endfor %}
+
 <h2 class="seminar-section">Upcoming talks</h2>
 
 {% if upcoming.size > 0 %}
@@ -94,6 +100,12 @@ upcoming; older ones go to "Past talks", grouped by academic year
   details.seminar-abstract[open] summary { margin-bottom: 0.4rem; }
   .seminar-bio { margin-top: 0.75rem; padding-top: 0.6rem; border-top: 1px dashed var(--global-divider-color); font-size: 0.9rem; }
   .seminar-bio-label { font-weight: 600; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--global-text-color-light); margin-bottom: 0.2rem; }
+  .seminar-series-speaker { margin-top: 0.15rem; color: var(--global-text-color-light); }
+  .seminar-sessions { margin-top: 0.75rem; display: flex; flex-wrap: wrap; align-items: center; gap: 0.35rem; font-size: 0.8rem; }
+  .seminar-sessions-label { font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; color: var(--global-text-color-light); margin-right: 0.25rem; }
+  .seminar-session { padding: 0.05rem 0.5rem; border: 1px solid var(--global-divider-color); border-radius: 0.25rem; white-space: nowrap; }
+  .seminar-session.past { opacity: 0.5; text-decoration: line-through; }
+  .seminar-session.next { border-color: var(--global-theme-color); color: var(--global-theme-color); font-weight: 600; }
   .seminar-links { margin-top: 0.5rem; font-size: 0.9rem; }
   .seminar-links a { margin-right: 1rem; }
 </style>
