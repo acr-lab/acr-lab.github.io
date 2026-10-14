@@ -5,6 +5,6 @@ image: le-quoc-huy.jpg
 email: huy.le@ttu.edu.vn
 website: https://sites.google.com/view/huy-quoc-le/
 bio: >
-  Tan Tao University.
+  International University, VNUHCMC.
 order: 5
 ---
