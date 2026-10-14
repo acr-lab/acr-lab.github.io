@@ -5,7 +5,7 @@ image: bui-dung.jpg
 email: dung.bui@lip6.fr
 website: https://dungbui15.github.io/
 bio: >
-  Sorbonne Université, CNRS, LIP6, France.
+  Department of Computer Science, Northwestern University, US.
 interests:
   - Secure Multiparty Computation
   - Zero-knowledge Proofs
