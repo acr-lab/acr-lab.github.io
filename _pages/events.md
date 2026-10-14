@@ -1,8 +1,7 @@
 ---
 layout: page
-title: Activities 
+title: Activities
 permalink: /activities/
-description: Seminars, talks, and workshops hosted by the lab.
 nav: true
 nav_order: 4
 ---
@@ -18,6 +17,7 @@ unless otherwise noted. All are welcome.
 ### Upcoming Activities
 
 {% if site.data.events.upcoming.size > 0 %}
+
 <table class="table table-hover">
   <thead>
     <tr>
@@ -69,6 +69,7 @@ unless otherwise noted. All are welcome.
 ### Past Activities
 
 {% if site.data.events.past.size > 0 %}
+
 <table class="table table-hover">
   <thead>
     <tr>
@@ -92,17 +93,33 @@ unless otherwise noted. All are welcome.
         {{ talk.speaker }}
         <br><small class="text-muted">{{ talk.affiliation }}</small>
       </td>
-      <td><strong>{{ talk.title }}</strong></td>
+      <td>
+        {%- if talk.abstract != "" and talk.abstract -%}
+          <details style="margin:0;padding:0;">
+            <summary><strong>{{ talk.title }}</strong></summary>
+            <small>{{ talk.abstract | newline_to_br }}</small>
+          </details>
+        {%- else -%}
+          <strong>{{ talk.title }}</strong>
+        {%- endif -%}
+        {%- if talk.time_from or talk.location %}
+          <small class="text-muted">{% if talk.time_from %}{{ talk.time_from }}{% if talk.time_to %} – {{ talk.time_to }}{% endif %}{% endif %}{% if talk.time_from and talk.location %} · {% endif %}{% if talk.location %}{{ talk.location }}{% endif %}</small>
+        {%- endif -%}
+      </td>
       <td style="white-space: nowrap;">
-        {% if talk.slides != "" and talk.slides %}
+        {% assign has_res = false %}
+        {% if talk.slides != "" and talk.slides %}{% assign has_res = true %}
           <a href="{{ talk.slides }}" target="_blank"><i class="fas fa-file-pdf"></i> slides</a>
         {% endif %}
-        {% if talk.recording != "" and talk.recording %}
+        {% if talk.recording != "" and talk.recording %}{% assign has_res = true %}
           <a href="{{ talk.recording }}" target="_blank"><i class="fab fa-youtube"></i> video</a>
         {% endif %}
-        {% if talk.slides == "" and talk.recording == "" %}
-          <small class="text-muted">—</small>
+        {% if talk.url != "" and talk.url %}{% assign has_res = true %}
+          <a href="{{ talk.url }}" target="_blank"><i class="fas fa-external-link-alt"></i> More info</a>
         {% endif %}
+        {% unless has_res %}
+          <small class="text-muted">—</small>
+        {% endunless %}
       </td>
     </tr>
   {% endfor %}
